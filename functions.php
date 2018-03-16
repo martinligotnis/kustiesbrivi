@@ -186,12 +186,11 @@ function kustiesbrivi_scripts() {
         wp_enqueue_style('kustiesbrivi_fonts', kustiesbrivi_fonts_url());
 	wp_enqueue_style( 'kustiesbrivi-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'kustiesbrivi-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
-	// wp_enqueue_script( 'kustiesbrivi-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), '20151215', true );
-	// wp_localize_script('kustiesbrivi-navigation', 'kustiesbriviScreenReaderText', array(
-	// 	'expand' => __('Expand child menu', 'kustiesbrivi'),
-	// 	'collapse' => __('Collapse child menu', 'kustiesbrivi'),
-	// ));
+	wp_enqueue_script( 'kustiesbrivi-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), '20151215', true );
+	wp_localize_script('kustiesbrivi-navigation', 'kustiesbriviScreenReaderText', array(
+		'expand' => __('Expand child menu', 'kustiesbrivi'),
+		'collapse' => __('Collapse child menu', 'kustiesbrivi'),
+	));
 
 	wp_enqueue_script( 'kustiesbrivi-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
