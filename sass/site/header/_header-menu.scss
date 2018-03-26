@@ -11,8 +11,8 @@
 		display: none;
 		list-style: none;
 		margin: 0;
-		padding-top: 1em;
 		padding-left: 0;
+		
 
 		ul {
 			display: none;
@@ -33,7 +33,7 @@
 			}
 
 			a {
-				width: 200px;
+				// width: 200px;
 			}
 		}
 
@@ -53,6 +53,7 @@
 		padding: .5em 1em .5em 0;
 		text-decoration: none;
 		color: #000;
+		text-transform: uppercase;
 	}
 
 	a:hover,
@@ -68,7 +69,7 @@
 
 	.menu-item-has-children,
 	.page_item_has_children {
-		min-width: 135px;
+		min-width: 100px;
 	}
 	.menu-item-has-children > a,
 	.page_item_has_children > a {
@@ -124,7 +125,21 @@ button.dropdown-toggle {
 		ul {
 			display: block;
 			display: flex;
-			flex-wrap: wrap;
+			// flex-wrap: wrap;
+			justify-content: flex-end;
+			padding-top: 0.5em;
+
+			li {
+				font-size: 0.8em;
+				
+				a {
+					padding: .4em 1em;
+				}
+
+				.dropdown-symbol{
+					font-size: 0.8em;
+				}
+			}
 
 			ul {
 				flex-direction: column;
@@ -132,19 +147,12 @@ button.dropdown-toggle {
 				margin-left: 0;
 
 				li {
-					padding-left: 0;
+					font-size: 1em;
 
 					a {
-						width: 218px;
+						// width: 180px;
 						background: none;
 					}
-				}
-			}
-
-			li {
-
-				a {
-					padding: .4em 1em;
 				}
 			}
 		}
@@ -157,8 +165,8 @@ button.dropdown-toggle {
 	.main-navigation {
 
 		ul {
-			justify-content: flex-end;
 			padding-top: 0;
+			padding-right: 1.4em;
 
 			/* If you want dropdowns to open on hover, uncomment this: */
 			
@@ -168,6 +176,8 @@ button.dropdown-toggle {
 			// }
 			
 		}
+
+		
 
 	}
 }
