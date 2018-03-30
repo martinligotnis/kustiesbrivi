@@ -1015,56 +1015,59 @@ a:hover, a:active {
 /*
 Header Menu
 */
+.menu {
+	margin: 0;
+	background-color: #6096dd;
+}
+
 .main-navigation {
-	display: grid;
-	grid-template-columns: 1fr;
-	grid-template-rows: minmax(2em, auto);
-	font-family: "Tenor Sans", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
-	font-weight: 400;
-	clear: left;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+}
+
+.main-navigation .menu-toggle {
+	border: 1px solid black;
+	-webkit-box-flex: 0;
+	    -ms-flex: 0 0 100%;
+	        flex: 0 0 100%;
+	background-color: #6096dd;
+	color: White;
+	text-transform: uppercase;
+}
+
+.main-navigation .menu-kustiesbrivi_top-container {
+	-webkit-box-flex: 0;
+	    -ms-flex: 0 0 100%;
+	        flex: 0 0 100%;
 }
 
 .main-navigation ul {
 	display: none;
 	list-style: none;
-	margin: 0;
-	padding-left: 0;
+	padding-right: 1em;
 }
 
 .main-navigation ul ul {
 	display: none;
-	top: 1.5em;
-	z-index: 99999;
+	list-style: none;
+	margin: 0.5em 0 0 0;
+	padding-right: 1em;
 }
 
-.main-navigation ul ul ul {
-	top: 0;
-}
-
-.main-navigation ul ul li {
-	padding-left: 1em;
-}
-
-.main-navigation ul ul li:hover > ul,
-.main-navigation ul ul li.focus > ul {
-	left: 100%;
-}
-
-.main-navigation ul li:hover > ul,
-.main-navigation ul li.focus > ul {
-	left: auto;
-}
-
-.main-navigation li {
-	position: relative;
+.main-navigation .dropdown-toggle {
+	border: none;
+	padding: 0;
+	padding-left: 0.5em;
 }
 
 .main-navigation a {
-	display: inline-block;
+	color: white;
 	width: 100%;
-	padding: .5em 1em .5em 0;
+	padding: .5em 0;
 	text-decoration: none;
-	color: #000;
 	text-transform: uppercase;
 }
 
@@ -1073,97 +1076,24 @@ Header Menu
 	text-decoration: underline;
 }
 
-.main-navigation .menu-item-has-children,
-.main-navigation .page_item_has_children {
-	min-width: 100px;
-}
-
-.main-navigation .menu-item-has-children > a,
-.main-navigation .page_item_has_children > a {
-	padding-right: 2em;
-}
-
-button.dropdown-toggle {
-	position: absolute;
-	right: 0;
-	border: none;
-	background: inherit;
-	color: black;
-	line-height: 0.5em;
-	padding: .4em 1em .4em .5em;
-}
-
-.menu-toggle {
-	padding: 1em 0;
-	font-size: 90%;
-	text-transform: uppercase;
-	color: black;
-	border: 0.25px solid rgba(255, 255, 255, 0.3);
-}
-
-.menu-toggle:hover,
-.menu-toggle:focus {
+.main-navigation .dropdown-symbol {
 	color: white;
-	background-color: #39A8E0;
-	font-weight: bolder;
 }
 
-/* Toggle small menu and children on */
 .toggled-on ul,
 .sub-menu.toggled-on {
-	display: block;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
 }
 
-@media screen and (min-width: 500px) {
-	.menu-toggle {
-		display: none;
-	}
-	.main-navigation .menu-item-has-children > a,
-	.main-navigation .page_item_has_children > a {
-		padding-right: 2em;
-		background: rgba(255, 255, 255, 0.1);
-	}
-	.main-navigation ul {
-		display: block;
-		display: -webkit-box;
-		display: -ms-flexbox;
-		display: flex;
-		-webkit-box-pack: end;
-		    -ms-flex-pack: end;
-		        justify-content: flex-end;
-		padding-top: 0.5em;
-	}
-	.main-navigation ul li {
-		font-size: 0.8em;
-	}
-	.main-navigation ul li a {
-		padding: .4em 1em;
-	}
-	.main-navigation ul li .dropdown-symbol {
-		font-size: 0.8em;
-	}
-	.main-navigation ul ul {
-		-webkit-box-orient: vertical;
-		-webkit-box-direction: normal;
-		    -ms-flex-direction: column;
-		        flex-direction: column;
-		background: rgba(255, 255, 255, 0.1);
-		margin-left: 0;
-	}
-	.main-navigation ul ul li {
-		font-size: 1em;
-	}
-	.main-navigation ul ul li a {
-		background: none;
-	}
-}
-
-@media screen and (min-width: 832px) {
-	.main-navigation ul {
-		padding-top: 0;
-		padding-right: 1.4em;
-		/* If you want dropdowns to open on hover, uncomment this: */
-	}
+.main-navigation.toggled-on .menu-toggle {
+	border: none;
+	background-color: rgba(96, 150, 221, 0.568);
 }
 
 /**/

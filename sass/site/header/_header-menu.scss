@@ -1,58 +1,48 @@
-.main-navigation {
-	display: grid;
-	grid-template-columns: 1fr;
-	grid-template-rows: minmax(2em,auto);
+.menu{
+	margin:0;
+	background-color: rgb(96, 150, 221);
+}
+.main-navigation{
+	display: flex;
+	flex-wrap: wrap;
 
-	font-family: $font__tenor;
-	font-weight: 400;
-	clear: left;
+	.menu-toggle{
+		border: 1px solid black;
+		flex: 0 0 100%;
+		background-color: rgb(96, 150, 221);
+		color:White;
+		text-transform: uppercase;
+	}
+
+	.menu-kustiesbrivi_top-container{
+		flex: 0 0 100%;
+	}
 
 	ul {
 		display: none;
 		list-style: none;
-		margin: 0;
-		padding-left: 0;
-		
+
+		padding-right: 1em;
+
 
 		ul {
 			display: none;
-			top: 1.5em;
-			z-index: 99999;
-
-			ul {
-				top: 0;
-			}
-
-			li {
-				padding-left: 1em;
-
-				&:hover > ul,
-				&.focus > ul {
-					left: 100%;
-				}
-			}
-
-			a {
-				// width: 200px;
-			}
-		}
-
-		li:hover > ul,
-		li.focus > ul {
-			left: auto;
+			list-style: none;
+			margin: 0.5em 0 0 0;
+			padding-right: 1em;
 		}
 	}
-
-	li {
-		position: relative;
+	.dropdown-toggle{
+		border: none;
+		padding: 0;
+		padding-left:0.5em;
 	}
 
 	a {
-		display: inline-block;
+		color:white;
 		width: 100%;
-		padding: .5em 1em .5em 0;
+		padding: .5em 0;
 		text-decoration: none;
-		color: #000;
 		text-transform: uppercase;
 	}
 
@@ -60,124 +50,225 @@
 	a:focus {
 		text-decoration: underline;
 	}
-
-	.current_page_item > a,
-	.current-menu-item > a,
-	.current_page_ancestor > a,
-	.current-menu-ancestor > a {
-	}
-
-	.menu-item-has-children,
-	.page_item_has_children {
-		min-width: 100px;
-	}
-	.menu-item-has-children > a,
-	.page_item_has_children > a {
-		padding-right: 2em;
+	.dropdown-symbol{
+		color: white;
 	}
 }
 
-button.dropdown-toggle {
-	position: absolute;
-	right: 0;
-	border: none;
-	background: inherit;
-	color: black; 
-	line-height: 0.5em;
-	padding: .4em 1em .4em .5em;
-}
-
-.menu-toggle {
-	padding: 1em 0;
-	font-size: 90%;
-	text-transform: uppercase;
-	color: black;
-	border: 0.25px solid hsla(0, 0%, 100%, .3);
-}
-
-.menu-toggle:hover,
-.menu-toggle:focus {
-		color: white; 
-		background-color: #39A8E0;
-		font-weight: bolder;
-	}
-
-/* Toggle small menu and children on */
 .toggled-on ul,
-.sub-menu.toggled-on {
-	display: block;
+.sub-menu.toggled-on{
+	display: flex;
+	flex-direction: column;
 	
 }
-
-@media screen and (min-width: $query__small) {
-	.menu-toggle {
-		display: none;
+.main-navigation.toggled-on{
+	.menu-toggle{
+		border: none;
+		background-color: rgba(96, 150, 221, 0.568);
 	}
-
-	.main-navigation {
-
-		.menu-item-has-children > a,
-		.page_item_has_children > a {
-			padding-right: 2em;
-			background: hsla(0, 0%, 100%, .1);
-		}
-
-		ul {
-			display: block;
-			display: flex;
-			// flex-wrap: wrap;
-			justify-content: flex-end;
-			padding-top: 0.5em;
-
-			li {
-				font-size: 0.8em;
-				
-				a {
-					padding: .4em 1em;
-				}
-
-				.dropdown-symbol{
-					font-size: 0.8em;
-				}
-			}
-
-			ul {
-				flex-direction: column;
-				background: hsla(0, 0%, 100%, .1);
-				margin-left: 0;
-
-				li {
-					font-size: 1em;
-
-					a {
-						// width: 180px;
-						background: none;
-					}
-				}
-			}
-		}
-
-	}
-
 }
 
-@media screen and (min-width: $query__medium) {
-	.main-navigation {
 
-		ul {
-			padding-top: 0;
-			padding-right: 1.4em;
 
-			/* If you want dropdowns to open on hover, uncomment this: */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .main-navigation {
+// 	display: grid;
+// 	grid-template-columns: 1fr;
+// 	grid-template-rows: minmax(2em,auto);
+
+// 	font-family: $font__din-pro-light;
+// 	font-weight: 400;
+// 	clear: left;
+
+// 	ul {
+// 		display: none;
+// 		list-style: none;
+// 		margin: 0;
+// 		padding-left: 0;
+		
+
+// 		ul {
+// 			display: none;
+// 			top: 1.5em;
+// 			z-index: 99999;
+
+// 			ul {
+// 				top: 0;
+// 			}
+
+// 			li {
+// 				padding-left: 1em;
+
+// 				&:hover > ul,
+// 				&.focus > ul {
+// 					left: 100%;
+// 				}
+// 			}
+
+// 			a {
+// 				// width: 200px;
+// 			}
+// 		}
+
+// 		li:hover > ul,
+// 		li.focus > ul {
+// 			left: auto;
+// 		}
+// 	}
+
+// 	li {
+// 		position: relative;
+// 	}
+
+// 	a {
+// 		display: inline-block;
+// 		width: 100%;
+// 		padding: .5em 1em .5em 0;
+// 		text-decoration: none;
+// 		color: #000;
+// 		text-transform: uppercase;
+// 	}
+
+// 	a:hover,
+// 	a:focus {
+// 		text-decoration: underline;
+// 	}
+
+// 	.current_page_item > a,
+// 	.current-menu-item > a,
+// 	.current_page_ancestor > a,
+// 	.current-menu-ancestor > a {
+// 	}
+
+// 	.menu-item-has-children,
+// 	.page_item_has_children {
+// 		min-width: 100px;
+// 	}
+// 	.menu-item-has-children > a,
+// 	.page_item_has_children > a {
+// 		padding-right: 2em;
+// 	}
+// }
+
+// button.dropdown-toggle {
+// 	position: absolute;
+// 	right: 0;
+// 	border: none;
+// 	background: inherit;
+// 	color: black; 
+// 	line-height: 0.5em;
+// 	padding: .4em 1em .4em .5em;
+// }
+
+// .menu-toggle {
+// 	padding: 1em 0;
+// 	font-size: 90%;
+// 	text-transform: uppercase;
+// 	color: black;
+// 	border: 0.25px solid hsla(0, 0%, 100%, .3);
+// }
+
+// .menu-toggle:hover,
+// .menu-toggle:focus {
+// 		color: white; 
+// 		background-color: #39A8E0;
+// 		font-weight: bolder;
+// 	}
+
+// /* Toggle small menu and children on */
+// .toggled-on ul,
+// .sub-menu.toggled-on {
+// 	display: block;
+	
+// }
+
+// @media screen and (min-width: $query__small) {
+// 	.menu-toggle {
+// 		display: none;
+// 	}
+
+// 	.main-navigation {
+
+// 		.menu-item-has-children > a,
+// 		.page_item_has_children > a {
+// 			padding-right: 2em;
+// 			background: hsla(0, 0%, 100%, .1);
+// 		}
+
+// 		ul {
+// 			display: block;
+// 			display: flex;
+// 			// flex-wrap: wrap;
+// 			justify-content: flex-end;
+// 			padding-top: 0.5em;
+
+// 			li {
+// 				font-size: 0.8em;
+				
+// 				a {
+// 					padding: .4em 1em;
+// 				}
+
+// 				.dropdown-symbol{
+// 					font-size: 0.8em;
+// 				}
+// 			}
+
+// 			ul {
+// 				flex-direction: column;
+// 				background: hsla(0, 0%, 100%, .1);
+// 				margin-left: 0;
+
+// 				li {
+// 					font-size: 1em;
+
+// 					a {
+// 						// width: 180px;
+// 						background: none;
+// 					}
+// 				}
+// 			}
+// 		}
+
+// 	}
+
+// }
+
+// @media screen and (min-width: $query__medium) {
+// 	.main-navigation {
+
+// 		ul {
+// 			padding-top: 0;
+// 			padding-right: 1.4em;
+
+// 			/* If you want dropdowns to open on hover, uncomment this: */
 			
-			// li:hover > ul,
-			// 	li:focus > ul {
-			// 	display: block;
-			// }
+// 			// li:hover > ul,
+// 			// 	li:focus > ul {
+// 			// 	display: block;
+// 			// }
 			
-		}
+// 		}
 
 		
 
-	}
-}
+// 	}
+// }
