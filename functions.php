@@ -95,22 +95,22 @@ function kustiesbrivi_fonts_url() {
 	 * supported by Archivo Black and Tenor Sans, translate this to 'off'. Do not translate
 	 * into your own language.
 	 */
-	$archivo_black = _x( 'on', 'Archivo Black font: on or off', 'kustiesbrivi' );
-        $tenor_sans = _x( 'on', 'Tenor Sans font: on or off', 'kustiesbrivi' );
+		$din_pro_black = _x( 'on', 'DIN PRO Black font: on or off', 'kustiesbrivi' );
+        $din_pro_light = _x( 'on', 'DIN PRO Light font: on or off', 'kustiesbrivi' );
 
         $font_families = array();
         
-        if ( 'off' !== $archivo_black ) {
-            $font_families[] = 'Archivo Black:400';
+        if ( 'off' !== $din_pro_black ) {
+            $font_families[] = 'DIN PRO Black:normal';
         }
-        if ( 'off' !== $tenor_sans ) {
-            $font_families[] = 'Tenor Sans:400';
+        if ( 'off' !== $din_pro_light ) {
+            $font_families[] = 'DIN PRO Light:normal';
         }
         
         
-	if ( in_array('on', array($archivo_black, $tenor_sans))) {
-		
-                /*https://fonts.googleapis.com/css?family=Archivo+Black|Tenor+Sans*/
+	if ( in_array('on', array($din_pro_black, $din_pro_light))) {
+	
+		/*https://fonts.googleapis.com/css?family=Archivo+Black|Tenor+Sans*/
 		$font_families[] = 'Libre Franklin:300,300i,400,400i,600,600i,800,800i';
 
 		$query_args = array(
@@ -122,6 +122,47 @@ function kustiesbrivi_fonts_url() {
 	}
 
 	return esc_url_raw( $fonts_url );
+
+
+
+
+
+
+
+	// $fonts_url = '';
+
+	// /*
+	//  * Translators: If there are characters in your language that are not
+	//  * supported by Archivo Black and Tenor Sans, translate this to 'off'. Do not translate
+	//  * into your own language.
+	//  */
+	// 	$archivo_black = _x( 'on', 'Archivo Black font: on or off', 'kustiesbrivi' );
+    //     $tenor_sans = _x( 'on', 'Tenor Sans font: on or off', 'kustiesbrivi' );
+
+    //     $font_families = array();
+        
+    //     if ( 'off' !== $archivo_black ) {
+    //         $font_families[] = 'Archivo Black:400';
+    //     }
+    //     if ( 'off' !== $tenor_sans ) {
+    //         $font_families[] = 'Tenor Sans:400';
+    //     }
+        
+        
+	// if ( in_array('on', array($archivo_black, $tenor_sans))) {
+		
+    //             /*https://fonts.googleapis.com/css?family=Archivo+Black|Tenor+Sans*/
+	// 	$font_families[] = 'Libre Franklin:300,300i,400,400i,600,600i,800,800i';
+
+	// 	$query_args = array(
+	// 		'family' => urlencode( implode( '|', $font_families ) ),
+	// 		'subset' => urlencode( 'latin,latin-ext' ),
+	// 	);
+
+	// 	$fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
+	// }
+
+	// return esc_url_raw( $fonts_url );
 }
 
 /**
@@ -183,7 +224,7 @@ add_action( 'widgets_init', 'kustiesbrivi_widgets_init' );
  */
 function kustiesbrivi_scripts() {
         //Enque Google fonts: 
-        wp_enqueue_style('kustiesbrivi_fonts', kustiesbrivi_fonts_url());
+    wp_enqueue_style('kustiesbrivi_fonts', kustiesbrivi_fonts_url());
 	wp_enqueue_style( 'kustiesbrivi-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'kustiesbrivi-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), '20151215', true );
