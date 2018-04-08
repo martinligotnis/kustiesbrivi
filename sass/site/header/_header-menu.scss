@@ -6,6 +6,51 @@
 	display: flex;
 	flex-wrap: wrap;
 
+	.bar,
+	.bar:before,
+	.bar:after {
+		display: block;
+		position: absolute;
+		width: 40px;
+		height: 5px;
+		background-color: rgb(0, 0, 0);
+		transition: all 0.3s ease-in-out;
+	}
+
+	.bar {
+		// top: 10px;
+		// left: 0;	
+	}
+		
+	.bar:before {
+		// position: absolute;
+		content: '';
+		top: 10px;
+		left: 0;
+	}
+
+	.bar:after {
+		position: absolute;
+		content: '';
+		top: -10px;	
+		left: 0;
+	}
+
+	.toggled-on .bar {
+		background-color: transparent;	
+	}
+
+	.toggled-on .bar:before {
+		top: 0;
+		transform: rotate(45deg);	
+	}
+
+	.toggled-on .bar:after {
+		top: 0;
+		transform: rotate(-45deg);	
+	}
+
+
 	.menu-toggle{
 		border: 1px solid black;
 		flex: 0 0 100%;
@@ -18,12 +63,14 @@
 		flex: 0 0 100%;
 	}
 
+	.menu-all-pages-container{
+		width: 100%;
+	}
+
 	ul {
 		display: none;
 		list-style: none;
-
 		padding-right: 1em;
-
 
 		ul {
 			display: none;
@@ -40,7 +87,6 @@
 
 	a {
 		color:white;
-		width: 100%;
 		padding: .5em 0;
 		text-decoration: none;
 		text-transform: uppercase;
@@ -59,6 +105,7 @@
 .sub-menu.toggled-on{
 	display: flex;
 	flex-direction: column;
+	align-items: center;
 	
 }
 .main-navigation.toggled-on{

@@ -391,7 +391,7 @@ select,
 optgroup,
 textarea {
 	color: #404040;
-	font-family: "Tenor Sans", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+	font-family: "DIN PRO Light", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 	font-size: 18px;
 	font-size: 1.125rem;
 	line-height: 1.5;
@@ -411,7 +411,7 @@ textarea {
 
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
-	font-family: "Archivo Black", Georgia, Cambria, Times, sans-serif;
+	font-family: "DIN PRO Black", Georgia, Cambria, Times, sans-serif;
 }
 
 h1 {
@@ -808,7 +808,7 @@ a:hover, a:active {
 ## Header
 --------------------------------------------------------------*/
 .site-header {
-	font-family: "Tenor Sans", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+	font-family: "DIN PRO Light", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 }
 
 @media screen and (min-width: 500px) {
@@ -820,7 +820,7 @@ a:hover, a:active {
 	.site-header #kontaktinfo {
 		grid-template-columns: minmax(20px, auto) 1fr;
 		padding: 0.2em 0;
-		grid-template-areas: "adrese"  "epasts";
+		grid-template-areas: "adrese"  "epasts";
 	}
 	.site-header #kontaktinfo > li:nth-child(1) {
 		justify-self: start;
@@ -891,7 +891,7 @@ a:hover, a:active {
 
 #top-bar {
 	display: grid;
-	grid-template-areas: "adreses" "soc";
+	grid-template-areas: "adreses" "soc";
 	grid-template-columns: 1fr;
 	grid-auto-rows: minmax(20px, auto);
 	border-bottom: 1px solid #e5e5e5;
@@ -900,7 +900,7 @@ a:hover, a:active {
 #kontaktinfo {
 	grid-area: adreses;
 	display: grid;
-	grid-template-areas: "adrese" "epasts";
+	grid-template-areas: "adrese" "epasts";
 	grid-template-columns: 1fr;
 	padding: 0;
 	list-style-type: none;
@@ -971,7 +971,7 @@ a:hover, a:active {
 
 .site-branding {
 	display: grid;
-	grid-template-areas: "logo" "phone";
+	grid-template-areas: "logo" "phone";
 	grid-template-columns: 1fr;
 	justify-items: center;
 	-webkit-box-align: center;
@@ -1028,6 +1028,47 @@ Header Menu
 	    flex-wrap: wrap;
 }
 
+.main-navigation .bar,
+.main-navigation .bar:before,
+.main-navigation .bar:after {
+	display: block;
+	position: absolute;
+	width: 40px;
+	height: 5px;
+	background-color: black;
+	-webkit-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
+.main-navigation .bar:before {
+	content: '';
+	top: 10px;
+	left: 0;
+}
+
+.main-navigation .bar:after {
+	position: absolute;
+	content: '';
+	top: -10px;
+	left: 0;
+}
+
+.main-navigation .toggled-on .bar {
+	background-color: transparent;
+}
+
+.main-navigation .toggled-on .bar:before {
+	top: 0;
+	-webkit-transform: rotate(45deg);
+	        transform: rotate(45deg);
+}
+
+.main-navigation .toggled-on .bar:after {
+	top: 0;
+	-webkit-transform: rotate(-45deg);
+	        transform: rotate(-45deg);
+}
+
 .main-navigation .menu-toggle {
 	border: 1px solid black;
 	-webkit-box-flex: 0;
@@ -1042,6 +1083,10 @@ Header Menu
 	-webkit-box-flex: 0;
 	    -ms-flex: 0 0 100%;
 	        flex: 0 0 100%;
+}
+
+.main-navigation .menu-all-pages-container {
+	width: 100%;
 }
 
 .main-navigation ul {
@@ -1065,7 +1110,6 @@ Header Menu
 
 .main-navigation a {
 	color: white;
-	width: 100%;
 	padding: .5em 0;
 	text-decoration: none;
 	text-transform: uppercase;
@@ -1089,6 +1133,9 @@ Header Menu
 	-webkit-box-direction: normal;
 	    -ms-flex-direction: column;
 	        flex-direction: column;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 }
 
 .main-navigation.toggled-on .menu-toggle {
