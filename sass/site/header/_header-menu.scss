@@ -5,25 +5,25 @@
 .main-navigation{
 	display: flex;
 	flex-wrap: wrap;
-
+	.menu-name{
+		font-size: 1.2em;
+	}
+	
 	.bar,
 	.bar:before,
 	.bar:after {
 		display: block;
 		position: absolute;
-		width: 40px;
-		height: 5px;
-		background-color: rgb(0, 0, 0);
+		width: 35px;
+		height: 4px;
+		right: 0.8em;
+		background-color: white;
 		transition: all 0.3s ease-in-out;
 	}
 
-	.bar {
-		// top: 10px;
-		// left: 0;	
-	}
 		
 	.bar:before {
-		// position: absolute;
+		position: absolute;
 		content: '';
 		top: 10px;
 		left: 0;
@@ -36,22 +36,26 @@
 		left: 0;
 	}
 
-	.toggled-on .bar {
+	.menu-toggle[aria-expanded="true"] .bar {
 		background-color: transparent;	
 	}
 
-	.toggled-on .bar:before {
+	.menu-toggle[aria-expanded="true"] .bar:before {
 		top: 0;
 		transform: rotate(45deg);	
 	}
 
-	.toggled-on .bar:after {
+	.menu-toggle[aria-expanded="true"] .bar:after {
 		top: 0;
 		transform: rotate(-45deg);	
 	}
 
 
 	.menu-toggle{
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
 		border: 1px solid black;
 		flex: 0 0 100%;
 		background-color: rgb(96, 150, 221);
@@ -70,13 +74,13 @@
 	ul {
 		display: none;
 		list-style: none;
-		padding-right: 1em;
+		padding: 0.5em 0 0.5em 1em;
 
 		ul {
 			display: none;
 			list-style: none;
-			margin: 0.5em 0 0 0;
-			padding-right: 1em;
+			padding-left: 1em;
+			margin-left:0;
 		}
 	}
 	.dropdown-toggle{
@@ -90,6 +94,7 @@
 		padding: .5em 0;
 		text-decoration: none;
 		text-transform: uppercase;
+		font-size: 1.2em;
 	}
 
 	a:hover,
@@ -105,8 +110,6 @@
 .sub-menu.toggled-on{
 	display: flex;
 	flex-direction: column;
-	align-items: center;
-	
 }
 .main-navigation.toggled-on{
 	.menu-toggle{
@@ -117,13 +120,57 @@
 
 
 
+@media screen and (min-width: $query__medium) {
+	.main-navigation {
 
+		.menu-toggle {
+			display: none;
+		}
 
+		.menu{
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-end;
+			margin-right: 2.2em;
+			background-color: transparent;
+			
+			// li{
+			// 	padding: 0 0.5em;
+			// 	border-right: 2px solid;
+			// }
+			// li:nth-last-child(1){
+			// 	border:none;
+			// }
 
+			li a{
+				color:black;
+				font-size: 1em;
+			}
 
+			// li a:hover, a:focus{
+			// 	color: grey;
+			// }
 
+			// .dropdown-symbol{
+			// 	color: black;
+			// }
+			
+			// ul{
+			// 	position: absolute;
+				
+			// 	li{
+			// 		border:none;
+			// 		text-align: right;
+			// 	}	
+			// 	ul{
+			// 		position: relative;
+			// 	}				
+			// }
 
+		}
+	}
 
+}
 
 
 

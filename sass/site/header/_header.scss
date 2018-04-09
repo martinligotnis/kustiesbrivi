@@ -85,6 +85,7 @@
         }
         .site-branding a:nth-child(2) {
             font-size: 1.1em;
+            padding-right: 2.2em;
         }
     }
 }
@@ -186,7 +187,7 @@
 	img {
 		display: block;
 		height: auto;
-		width: 200px;
+		width: 230px;
 	}
 }
 .phone{
@@ -195,9 +196,9 @@
 .site-branding a:nth-child(2) {
     font-family: Lucida;
     text-decoration: none;
-    font-size: 1em;
+    font-size: 1.2em;
     color: #373f50;
-    padding: 1em auto;
+    padding: 0.5em 0;
     text-align: center;
 }
 .site-branding a:nth-child(2) i{    
@@ -205,11 +206,7 @@
     padding-right: 6px;
     font-size: 1.65em;
 }
-// .main-navigation ul{
-//     display: flex;
-//     justify-content: space-around;
-//     align-items: center;
-// }
+
 /*
 Header Menu
 */

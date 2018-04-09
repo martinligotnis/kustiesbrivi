@@ -45,7 +45,7 @@
 
 		
 		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><span class="bar"></span><?php esc_html_e( 'Primary Menu', 'kustiesbrivi' ); ?></button>
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><span class="menu-name"><?php esc_html_e( 'Primary Menu', 'kustiesbrivi' ); ?></span><span class="bar"></span></button>
 			<?php
 			wp_nav_menu( array(
 				'theme_location' => 'menu-1',
