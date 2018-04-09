@@ -1105,7 +1105,7 @@ Header Menu
 	        flex: 0 0 100%;
 }
 
-.main-navigation .menu-all-pages-container {
+.main-navigation > div {
 	width: 100%;
 }
 
@@ -1161,6 +1161,10 @@ Header Menu
 	background-color: rgba(96, 150, 221, 0.568);
 }
 
+a, a:active, a:focus {
+	outline: none;
+}
+
 @media screen and (min-width: 832px) {
 	.main-navigation .menu-toggle {
 		display: none;
@@ -1179,9 +1183,18 @@ Header Menu
 		margin-right: 2.2em;
 		background-color: transparent;
 	}
+	.main-navigation .menu li {
+		padding: 0 0.5em;
+	}
 	.main-navigation .menu li a {
 		color: black;
 		font-size: 1em;
+	}
+	.main-navigation .menu li a:hover, .main-navigation .menu a:focus {
+		color: #37d6c0;
+	}
+	.main-navigation .menu .dropdown-symbol {
+		color: black;
 	}
 }
 

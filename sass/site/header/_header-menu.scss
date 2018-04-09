@@ -67,7 +67,7 @@
 		flex: 0 0 100%;
 	}
 
-	.menu-all-pages-container{
+	>div{
 		width: 100%;
 	}
 
@@ -118,6 +118,9 @@
 	}
 }
 
+a, a:active, a:focus {
+	outline: none;
+ }
 
 
 @media screen and (min-width: $query__medium) {
@@ -134,10 +137,10 @@
 			margin-right: 2.2em;
 			background-color: transparent;
 			
-			// li{
-			// 	padding: 0 0.5em;
-			// 	border-right: 2px solid;
-			// }
+			li{
+				padding: 0 0.5em;
+				// border-right: 2px solid;
+			}
 			// li:nth-last-child(1){
 			// 	border:none;
 			// }
@@ -147,13 +150,13 @@
 				font-size: 1em;
 			}
 
-			// li a:hover, a:focus{
-			// 	color: grey;
-			// }
+			li a:hover, a:focus{
+				color: #37d6c0;
+			}
 
-			// .dropdown-symbol{
-			// 	color: black;
-			// }
+			.dropdown-symbol{
+				color: black;
+			}
 			
 			// ul{
 			// 	position: absolute;
