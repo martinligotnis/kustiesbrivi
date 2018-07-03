@@ -28,7 +28,7 @@
 	<header id="masthead" class="site-header">
                 <div id="top-bar">
                         <ul id="kontaktinfo">
-                                <li><a href="https://www.google.lv/maps/place/Vesel%C4%ABbas+centrs+3/@56.9408883,24.1348199,15z/data=!4m5!3m4!1s0x0:0xcb02f4d2a0352ef8!8m2!3d56.9408883!4d24.1348199" target="_blank"><i class="fa fa-map-marker" aria-hidden="true" ></i>Firsa Sadovņikova iela 20 - 318, Rīga</a></li>
+                                <li><a href="https://www.google.lv/maps/place/Kusties+Br%C4%ABvi+SIA/@56.9408883,24.1326312,17z/data=!3m1!4b1!4m5!3m4!1s0x46eecfa0459c475d:0x8889d4676eb051df!8m2!3d56.9408883!4d24.1348199" target="_blank"><i class="fa fa-map-marker" aria-hidden="true" ></i>Firsa Sadovņikova iela 20 - 318, Rīga</a></li>
                                 <li><a href="mailto:info@kustiesbrivi.lv"><i class="fa fa-envelope-o" aria-hidden="true"></i>info@kustiesbrivi.lv</a></li>
                         </ul>
                         <div class="soc">
@@ -45,7 +45,7 @@
 
 		
 		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><span class="menu-name"><?php esc_html_e( 'Primary Menu', 'kustiesbrivi' ); ?></span><span class="bar"></span></button>
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><span class="menu-name"><?php esc_html_e( 'Izvēlne', 'kustiesbrivi' ); ?></span><span class="bar"></span></button>
 			<?php
 			wp_nav_menu( array(
 				'theme_location' => 'menu-1',
