@@ -95,23 +95,18 @@ function kustiesbrivi_fonts_url() {
 	 * supported by Archivo Black and Tenor Sans, translate this to 'off'. Do not translate
 	 * into your own language.
 	 */
-		$din_pro_black = _x( 'on', 'DIN PRO Black font: on or off', 'kustiesbrivi' );
-        $din_pro_light = _x( 'on', 'DIN PRO Light font: on or off', 'kustiesbrivi' );
+		$open_sans = _x( 'on', 'Open Sans font: on or off', 'kustiesbrivi' );
 
         $font_families = array();
         
-        if ( 'off' !== $din_pro_black ) {
-            $font_families[] = 'DIN PRO Black:normal';
-        }
-        if ( 'off' !== $din_pro_light ) {
-            $font_families[] = 'DIN PRO Light:normal';
+        if ( 'off' !== $open_sans ) {
+            $font_families[] = 'Open Sans:normal';
         }
         
-        
-	if ( in_array('on', array($din_pro_black, $din_pro_light))) {
+	if ( in_array('on', array($open_sans))) {
 	
 		/*https://fonts.googleapis.com/css?family=Archivo+Black|Tenor+Sans*/
-		$font_families[] = 'Libre Franklin:300,300i,400,400i,600,600i,800,800i';
+		$font_families[] = 'Open Sans:300,300i,400,400i,600,600i,800,800i';
 
 		$query_args = array(
 			'family' => urlencode( implode( '|', $font_families ) ),

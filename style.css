@@ -391,7 +391,7 @@ select,
 optgroup,
 textarea {
 	color: #404040;
-	font-family: "DIN PRO Light", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+	font-family: "Open Sans", Georgia, Cambria, Times, sans-serif;
 	font-size: 18px;
 	font-size: 1.125rem;
 	line-height: 1.5;
@@ -404,14 +404,14 @@ textarea {
 	select,
 	optgroup,
 	textarea {
-		font-size: 20px;
-		font-size: 1.25rem;
+		font-size: 18px;
+		font-size: 1.125rem;
 	}
 }
 
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
-	font-family: "DIN PRO Black", Georgia, Cambria, Times, sans-serif;
+	font-family: "Open Sans", Georgia, Cambria, Times, sans-serif;
 }
 
 h1 {
@@ -456,7 +456,7 @@ address {
 
 pre {
 	background: #eee;
-	font-family: "Courier 10 Pitch", Courier, monospace;
+	font-family: "Open Sans", Courier, monospace;
 	font-size: 18.75px;
 	font-size: 1.17188rem;
 	line-height: 1.6;
@@ -467,7 +467,7 @@ pre {
 }
 
 code, kbd, tt, var {
-	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+	font-family: "Monaco", Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 	font-size: 18.75px;
 	font-size: 1.17188rem;
 }
@@ -772,9 +772,7 @@ a:hover, a:active {
 .comment-content:before,
 .comment-content:after,
 .site-content:before,
-.site-content:after,
-.site-footer:before,
-.site-footer:after {
+.site-content:after {
 	content: "";
 	display: table;
 	table-layout: fixed;
@@ -783,8 +781,7 @@ a:hover, a:active {
 .clear:after,
 .entry-content:after,
 .comment-content:after,
-.site-content:after,
-.site-footer:after {
+.site-content:after {
 	clear: both;
 }
 
@@ -809,8 +806,7 @@ a:hover, a:active {
 --------------------------------------------------------------*/
 #top-bar {
 	display: grid;
-	grid-template-areas: "adreses"
- "soc";
+	grid-template-areas: "adreses" "soc";
 	grid-template-columns: 1fr;
 	grid-auto-rows: minmax(20px, auto);
 	border-bottom: 1px solid #e5e5e5;
@@ -819,8 +815,7 @@ a:hover, a:active {
 #kontaktinfo {
 	grid-area: adreses;
 	display: grid;
-	grid-template-areas: "adrese"
- "epasts";
+	grid-template-areas: "adrese" "epasts";
 	grid-template-columns: 1fr;
 	padding: 0;
 	list-style-type: none;
@@ -891,8 +886,7 @@ a:hover, a:active {
 
 .site-branding {
 	display: grid;
-	grid-template-areas: "logo"
- "phone";
+	grid-template-areas: "logo" "phone";
 	grid-template-columns: 1fr;
 	justify-items: center;
 	-webkit-box-align: center;
@@ -1009,7 +1003,6 @@ li > ul li {
 	-webkit-box-align: center;
 	    -ms-flex-align: center;
 	        align-items: center;
-
 	width: 100%;
 	text-align: left;
 	border-top: none;
@@ -1074,13 +1067,11 @@ li > ul li {
 	        align-items: stretch;
 }
 
-
 @media screen and (min-width: 875px) {
 	.main-navigation .menu-top-menu-container {
 		width: 30%;
 		margin-left: 55%;
 	}
-
 	.main-navigation .menu-toggle {
 		display: none;
 	}
@@ -1132,7 +1123,6 @@ li > ul li {
 	.main-navigation .menu .current-menu-item {
 		background: none;
 	}
-
 	.main-navigation .menu .current-menu-item a {
 		color: #07a7e3;
 	}
@@ -1146,20 +1136,12 @@ li > ul li {
 	}
 	.main-navigation .menu .dropdown-toggle {
 		line-height: 2em;
-
-	}
-	.main-navigation .menu li a:hover, .main-navigation .menu a:focus {
-		color: #37d6c0;
-	}
-	.main-navigation .menu .dropdown-symbol {
-		color: black;
 	}
 }
 
 /**/
-
 .site-header {
-	font-family: "DIN PRO Light", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+	font-family: "Open Sans", Georgia, Cambria, Times, sans-serif;
 	margin-bottom: 1em;
 }
 
@@ -1172,14 +1154,13 @@ li > ul li {
 	.site-header #kontaktinfo {
 		grid-template-columns: minmax(20px, auto) 1fr;
 		padding: 0.2em 0;
-		grid-template-areas: "adrese" 
- "epasts";
+		grid-template-areas: "adrese"  "epasts";
 	}
 	.site-header #kontaktinfo > li:nth-child(1) {
 		justify-self: start;
 	}
 	.site-header #kontaktinfo > li {
-		font-size: 0.85em;
+		font-size: 0.9em;
 	}
 	.site-header #kontaktinfo > li i {
 		font-size: 1.2em;
@@ -1226,7 +1207,7 @@ li > ul li {
 		grid-template-areas: "adrese epasts";
 	}
 	.site-header #kontaktinfo > li {
-		font-size: 0.8em;
+		font-size: 0.9em;
 	}
 	.site-header #kontaktinfo > li:nth-child(1) a {
 		display: -webkit-box;
@@ -1269,17 +1250,219 @@ li > ul li {
 --------------------------------------------------------------*/
 .site-footer {
 	background-color: #444f5d;
-	color: rgba(255, 255, 255, 0.5);
+	text-transform: capitalize;
 }
 
-.site-footer a {
+.site-footer p {
+	margin: 0;
+}
+
+.site-footer h3, .site-footer h4 {
+	font-weight: normal;
+}
+
+.site-footer .title {
+	margin: 2em 1em 1.5em 1em;
+}
+
+.site-footer .socmedia h3 {
+	color: #fff;
+	font-size: 1em;
+	padding-bottom: 0.5em;
+	position: relative;
+}
+
+.site-footer .socmedia h3::before {
+	background: #37d6c0;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	height: 1px;
+	width: 60px;
+	content: "";
+}
+
+.site-footer .socmedia .soc {
+	padding: 1em 1.5em;
+}
+
+.site-footer .socmedia .soc a {
+	padding-right: 5px;
+}
+
+.site-footer .footerblock h3 {
+	color: #fff;
+	text-transform: capitalize;
+	font-size: 1em;
+	padding-bottom: 0.5em;
+	position: relative;
+}
+
+.site-footer .footerblock h3::before {
+	background: #37d6c0;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	height: 1px;
+	width: 60px;
+	content: "";
+}
+
+.site-footer .footerblock a {
+	color: rgba(255, 255, 255, 0.6);
 	text-decoration: none;
-	color: rgba(255, 255, 255, 0.3);
+	display: block;
+	outline: none;
+}
+
+.site-footer .footerblock .people {
+	padding-bottom: 0.5em;
+	margin-bottom: 1em;
+}
+
+.site-footer .footerblock .people ul li {
+	list-style: none;
+	padding-left: 1em;
+	padding-bottom: 0.2em;
+}
+
+.site-footer .footerblock .people ul li h4 {
+	font-size: 0.9em;
+	color: rgba(255, 255, 255, 0.6);
+}
+
+.site-footer .footerblock .people ul li p {
+	font-size: 0.8em;
+	color: rgba(255, 255, 255, 0.4);
+}
+
+.site-footer .footerblock .people ul li #acceptance {
+	font-size: 0.8em;
+	color: rgba(255, 255, 255, 0.7);
+	padding-top: 1em;
+	text-decoration: underline;
+}
+
+.site-footer .footerblock .people .timetable li {
+	color: #fff;
+	font-size: 0.8em;
+	padding: 0;
+	padding-left: 1.25em;
+}
+
+.site-footer .footerblock .list p {
+	max-width: 96%;
+	display: block;
+	font-size: 0.75em;
+	color: rgba(255, 255, 255, 0.6);
+	padding: 0.4em 0.5em;
+	margin-left: 1em;
+	border-bottom: solid 1px rgba(255, 255, 255, 0.1);
+}
+
+.site-footer .footerblock .list p:hover {
+	background-color: #444755;
+	-webkit-transition: ease-in-out;
+	transition: ease-in-out;
+}
+
+.site-footer .footerblock .list p:last-child {
+	border-bottom: none;
+	margin-bottom: 2em;
+}
+
+.site-footer .footerblock .no_hover {
+	display: block;
+	font-size: 0.75em;
+	color: rgba(255, 255, 255, 0.6);
+	padding: 0.4em 0.5em;
+	margin-left: 1em;
+	border-bottom: solid 1px rgba(255, 255, 255, 0.1);
+}
+
+.site-footer .footerblock .no_hover p {
+	padding: 0.2em 0;
+}
+
+.site-footer .footerblock .no_hover .no_cap {
+	text-transform: lowercase;
+}
+
+.site-footer .footerblock .no_hover p:last-child {
+	margin-bottom: 2em;
+}
+
+.site-footer .site-info {
+	border-top: solid 1px rgba(255, 255, 255, 0.1);
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	height: 3em;
+}
+
+.site-footer .site-info p {
+	color: rgba(255, 255, 255, 0.6);
+	font-size: 0.8em;
+}
+
+@media screen and (min-width: 500px) {
+	.site-footer {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-auto-rows: auto;
+		grid-template-areas: "soc contacts" "people services" "footer footer";
+	}
+	.site-footer .socmedia {
+		grid-area: soc;
+		-ms-flex-item-align: start;
+		    align-self: start;
+		justify-self: center;
+	}
+	.site-footer .people {
+		grid-area: people;
+		-ms-flex-item-align: start;
+		    align-self: start;
+		justify-self: center;
+	}
+	.site-footer .services {
+		grid-area: services;
+		-ms-flex-item-align: start;
+		    align-self: start;
+		justify-self: center;
+	}
+	.site-footer .contacts {
+		grid-area: contacts;
+		-ms-flex-item-align: start;
+		    align-self: start;
+		justify-self: center;
+	}
+	.site-footer .contacts .no_hover {
+		border: none;
+	}
+	.site-footer .contacts .no_hover p:last-child {
+		margin-bottom: 0;
+	}
+	.site-footer .site-info {
+		grid-area: footer;
+	}
+}
+
+@media screen and (min-width: 875px) {
+	.site-footer {
+		grid-template-columns: 2fr repeat(3, 1fr);
+		grid-auto-rows: auto;
+		grid-template-areas: "soc people services contacts" "footer footer footer footer";
+	}
 }
 
 /*--------------------------------------------------------------
 ## Posts and pages
-
 --------------------------------------------------------------*/
 .site {
 	display: grid;

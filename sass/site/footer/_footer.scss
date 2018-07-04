@@ -1,8 +1,204 @@
 .site-footer{
     background-color: #444f5d;
-    color: rgba(255, 255, 255, 0.5);
-    a{
-        text-decoration: none;
-        color: rgba(255, 255, 255, 0.3);
+    text-transform: capitalize;
+
+    p{
+        margin: 0;
+    }
+    h3, h4{
+        font-weight: normal;
+    }
+    .title{
+        margin: 2em 1em 1.5em 1em;
+    }
+    .socmedia{
+        
+        h3{
+            color:#fff;            
+            font-size: 1em;
+            padding-bottom:0.5em;
+            // margin: 1.5em 0 1em 1em;
+            position: relative;
+        }
+
+        h3::before{
+            background: #37d6c0;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 1px;
+            width: 60px;
+            content: "";
+        }
+        .soc{
+            padding: 1em 1.5em;
+
+            a{
+                padding-right: 5px;
+            }
+        }        
+    }
+
+    .footerblock{
+
+        h3{
+            color:#fff;
+            text-transform: capitalize;
+            font-size: 1em;
+            padding-bottom:0.5em;
+            // margin: 0 0 1em 1em;
+            position: relative;
+        }
+
+        h3::before{
+            background: #37d6c0;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 1px;
+            width: 60px;
+            content: "";
+        }
+
+        a{  
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            display: block;
+            outline: none;
+        }
+
+        .people{  
+            padding-bottom: 0.5em; 
+            margin-bottom: 1em;
+
+            ul li{
+                list-style: none;
+                padding-left: 1em;
+                padding-bottom: 0.2em;
+
+                h4{
+                    font-size: 0.9em;
+                    color: rgba(255, 255, 255, 0.6);
+                }
+                p{
+                    font-size: 0.8em;
+                    color: rgba(255, 255, 255, 0.4);
+                }
+                #acceptance{
+                    font-size: 0.8em;
+                    color: rgba(255, 255, 255, 0.7);
+                    padding-top: 1em;
+                    text-decoration: underline;
+                }
+            }
+            .timetable li{
+                color: #fff;
+                font-size: 0.8em;
+                padding: 0;
+                padding-left: 1.25em;
+            }
+        }
+        .list p{
+            max-width: 96%;
+            display: block;
+            font-size: 0.75em;
+            color: rgba(255, 255, 255, 0.6);
+            padding: 0.4em 0.5em;
+            margin-left: 1em;
+            border-bottom: solid 1px rgba(255, 255, 255, 0.1);            
+        }
+        .list p:hover{
+            background-color: #444755;
+            transition: ease-in-out;
+        }
+        .list p:last-child{
+            border-bottom: none;
+            margin-bottom: 2em;
+        }
+
+        .no_hover{
+            display: block;
+            font-size: 0.75em;
+            color: rgba(255, 255, 255, 0.6);
+            padding: 0.4em 0.5em;
+            margin-left: 1em;
+            border-bottom: solid 1px rgba(255, 255, 255, 0.1); 
+
+            p{
+                padding: 0.2em 0;
+            }
+            .no_cap{
+                text-transform: lowercase;
+            }
+        }
+        .no_hover p:last-child{
+            margin-bottom: 2em;
+        }
+        
+    }
+
+    .site-info{
+        border-top: solid 1px rgba(255, 255, 255, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 3em;
+        p{
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.8em;          
+        }
+    }
+}
+
+@media screen and (min-width: $query__small){
+    .site-footer{
+       display: grid;
+       grid-template-columns: 1fr 1fr;
+       grid-auto-rows: auto;
+       grid-template-areas: 
+                    "soc contacts"
+                    "people services"
+                    "footer footer";
+
+       .socmedia{
+           grid-area: soc;
+           align-self: start;
+           justify-self: center;
+       }
+       .people{
+            grid-area: people;
+            align-self: start;
+            justify-self: center;
+       }
+       .services{
+            grid-area: services;
+            align-self: start;
+            justify-self: center;
+        }
+        .contacts{
+            grid-area: contacts;
+            align-self: start;
+            justify-self: center;
+
+            .no_hover{
+                border: none; 
+            }
+            .no_hover p:last-child{
+                margin-bottom: 0;
+            }
+        }
+        .site-info{
+            grid-area: footer;
+        }
+    }
+}
+
+@media screen and (min-width: $query__medium){
+    .site-footer{
+       grid-template-columns: 2fr repeat(3, 1fr);
+       grid-auto-rows: auto;
+       grid-template-areas: 
+        "soc people services contacts"
+        "footer footer footer footer";
     }
 }

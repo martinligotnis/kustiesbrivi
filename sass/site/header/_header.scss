@@ -124,7 +124,7 @@ Header Menu
 /**/
 
 .site-header{
-    font-family: $font__din-pro-light;
+    font-family: $font__opensans;
     margin-bottom: 1em;
     
     @media screen and (min-width: $query__small){
@@ -147,7 +147,7 @@ Header Menu
 
         }        
         #kontaktinfo > li{
-            font-size: 0.85em;
+            font-size: 0.9em;
         }
         #kontaktinfo > li i {
             font-size: 1.2em;
@@ -197,7 +197,7 @@ Header Menu
             "adrese epasts";
         }     
         #kontaktinfo > li{
-            font-size: 0.8em;
+            font-size: 0.9em;
         }
         #kontaktinfo > li:nth-child(1) a {
             display: flex;
